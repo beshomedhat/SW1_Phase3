@@ -44,7 +44,7 @@ public class Uploader extends Users
    }
    void categorize(Item c)
    {
-        c = new Item();
+        
         System.out.print("Enter Category of item : ");
         System.out.print("For Wallet write Wallets ");
         System.out.println();
@@ -60,7 +60,7 @@ public class Uploader extends Users
    }
    void SetLocation(Item c)
    {
-        c = new Item();
+        
         System.out.print("Enter Location of item where you found it : ");
         System.out.println(); 
         Scanner scanner = new Scanner(System.in);
@@ -69,7 +69,7 @@ public class Uploader extends Users
    void Enter_Featers(Item c)
    {
        
-       c = new Item();
+      
         System.out.print("Enter Features of item : ");
         System.out.println();
         System.out.print("The color : ");

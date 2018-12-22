@@ -6,7 +6,9 @@ import assi_sw1.Items.Item;
 
 public class Uploader extends Users
 {
-
+   User UPLOADER=new User();
+   Item item=new Item();
+   Questions question=new Questions();
    
    void UploadPhoto()
    {

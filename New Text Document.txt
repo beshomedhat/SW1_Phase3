@@ -1,7 +1,0 @@
-|        NAMES       |   IDS   | 
-|______________________________|
-|Bashar Reda Anwer   | 20150083|
-|Poula Helmy Mousa   | 20150085|
-|Beshoy Medhat Fayek | 20150086|
-|Beshoy Melad Kamal  | 20150087|
-|______________________________|

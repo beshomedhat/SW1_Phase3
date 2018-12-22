@@ -16,7 +16,7 @@ public class Searching {
  public static void READ_items_from_FILE()
     { 
         
-        String fileName = "C:\\Users\\Poula\\Desktop\\myprojects\\java\\assi_sw1\\Users.txt";  
+        String fileName = "Item.txt";  
 
         File file = new File(fileName);
         String line = null;

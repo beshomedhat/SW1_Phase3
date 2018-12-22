@@ -3,16 +3,18 @@ package assi_sw1;
 
 /**
  *
- * @author Poula
+ * @author bashar
  */
-public class searcher extends Users
- { public void search (string filename,string searchStr)
- 
- {getCategory(filename,searchStr);
- getItemFeatures (filename,searchStr);}
- 
- public void answerQuestion()
- {
- }
- 
+public class searcher extends Searching{
+    
+      public void search() throws FileNotFoundException{
+                getCategory();
+                getItemFeatures();
+            }
+
+
+    public void answerQuestion(){
+          
+    }
+}
 }

@@ -19,7 +19,7 @@ public class Uploader extends Users
     public static void WRTIE_in_file(Item e)
     {
      
-        String fileName = "C:\\Users\\Poula\\Desktop\\myprojects\\java\\assi_sw1\\Users.txt";  
+        String fileName = "Item.txt";  
         // write the content in file 
         try(FileWriter fileWriter = new FileWriter(fileName,true)) 
         {  

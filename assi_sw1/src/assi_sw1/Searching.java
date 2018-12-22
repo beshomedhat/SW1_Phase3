@@ -37,8 +37,7 @@ public class Searching {
                       String[] splitStr = line.split("\\s+");
                                               // \\s+  matches one or many whitespaces.
                                               //They're the so-called regular expression quantifiers
-                                             
-    
+
                          p.setCaregory(splitStr[0]);
                          p.setColor(splitStr[1]);
                          p.setFinding_Location(splitStr[2]);
@@ -46,17 +45,10 @@ public class Searching {
                          p.setItem_ID(splitStr[4]);
 
                          Itemslist.add(p);
-                     
-
-
-
                   }
             }
         catch(FileNotFoundException e){}
-        
-    }
-        
-
+ }
 public static void getCategory()
 {
            System.out.print("Enter Category of item : ");
@@ -84,14 +76,10 @@ public static void getCategory()
                     +"  "+e.getFinding_Location()
                     +"  "+e.getStatus()
                     +"  "+e.getItem_ID()+" \n";
-                System.out.println(item1);
-                
-            }
-           
-        }
-        
+                System.out.println(item1);   
+            }  
+        }       
 }
-
 public static void getItemFeatures()
 {
         System.out.print("Enter Features of item : ");
@@ -114,12 +102,8 @@ public static void getItemFeatures()
                     +"  "+e.getFinding_Location()
                     +"  "+e.getStatus()
                     +"  "+e.getItem_ID()+" \n";
-                System.out.println(item1);
-                
-            }
-           
-        }
-        
+                System.out.println(item1);   
+            }  
+        }       
 }
-
 }

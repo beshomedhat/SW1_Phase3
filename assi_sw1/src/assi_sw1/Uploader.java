@@ -4,6 +4,9 @@ package assi_sw1;
 import assi_sw1.Items.Item;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+
+import java.io.IOException;
+
 import java.util.Scanner;
 
 
@@ -13,6 +16,28 @@ public class Uploader extends Users
    Item item=new Item();
    Questions question=new Questions();
    
+    public static void WRTIE_in_file(Item e)
+    {
+     
+        String fileName = "C:\\Users\\Poula\\Desktop\\myprojects\\java\\assi_sw1\\Users.txt";  
+        // write the content in file 
+        try(FileWriter fileWriter = new FileWriter(fileName,true)) 
+        {  
+            String fileContent = e.getCaregory()+
+                    "  "+e.getColor()
+                    +"  "+e.getFinding_Location()
+                    +"  "+e.getStatus()
+                    +"  "+e.getItem_ID()+" \n";
+            fileWriter.write(fileContent);//the true will append the new data
+        } 
+       catch (IOException ee) 
+       {
+            // exception handling
+            System.out.println("-------ERROR HAS OUCCURED---------");
+            
+        }
+    }
+
    void UploadPhoto()
    {
        

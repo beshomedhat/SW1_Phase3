@@ -6,10 +6,10 @@ public class Items
 {
     public static class Item
     {
-        private String color;
-        private String status;
-        private String Finding_Location;
-        private String caregory;
+        public String color;
+        public String status;
+        public String Finding_Location;
+        public String caregory;
         private String Item_ID;
         private int counts;
 

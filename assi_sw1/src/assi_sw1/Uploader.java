@@ -44,16 +44,13 @@ public class Uploader extends Users
    }
    void categorize(Item c)
    {
-        
-        System.out.print("Enter Category of item : ");
-        System.out.print("For Wallet write Wallets ");
-        System.out.println();
-          System.out.print("For IDs write ID ");
-        System.out.println();
-          System.out.print("For Phones write Phones ");
-        System.out.println();
-          System.out.print("For Papers&Files write p and f ");
-        System.out.println();
+        System.out.println("-_-_-_-_--_-_-_-_--_-_-_-_-_-_-_-_--_-_-_-_--_-_-_-_-");
+        System.out.println("\t\t----- Enter Category of item : -----");
+        System.out.println("\t\t----- For Wallet write Wallets -----\n");
+        System.out.println("\t\t----- For IDs write ID -----\n");
+        System.out.println("\t\t----- For Phones write Phones -----\n");
+        System.out.println("\t\t----- For Papers&Files write p and f -----\n");
+        System.out.println("--------------------------------------------------");
         Scanner scanner = new Scanner(System.in);
         c.caregory=scanner.nextLine();
         
@@ -61,7 +58,7 @@ public class Uploader extends Users
    void SetLocation(Item c)
    {
         
-        System.out.print("Enter Location of item where you found it : ");
+        System.out.print("\n\t\t----- Enter Location of item where you found it : -----");
         System.out.println(); 
         Scanner scanner = new Scanner(System.in);
         c.Finding_Location=scanner.nextLine();
@@ -70,17 +67,17 @@ public class Uploader extends Users
    {
        
       
-        System.out.print("Enter Features of item : ");
+        System.out.print("\n\t\t----- Enter Features of item : -----");
         System.out.println();
-        System.out.print("The color : ");
+        System.out.print("\n\t\t----- The color : -----");
         Scanner scanner = new Scanner(System.in);
         c.color=scanner.nextLine();
         System.out.println();
-        System.out.print("the Status ");
+        System.out.print("\n\t\t----- the Status -----");
         Scanner scanner1 = new Scanner(System.in);
         c.status=scanner1.nextLine();
         System.out.println();
-        System.out.print(" Thank you for your assistance :) ");
+        System.out.print("--------------- ( Thank you for your assistance : ) -----------------");
         System.out.println();
    }
    void Update_Category()

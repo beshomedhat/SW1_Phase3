@@ -118,75 +118,56 @@ public class Users
     }//end of class User
     
     
-    public static void Choose() throws IOException
+   
+    
+    public static User Choose1() throws IOException
     {
 
 
         System.out.println("Enter \"login\", \"register\"");
-        Users user=new Users();
+        User user=new User();
        
         input = scanner.nextLine();
-        switch (input) 
-        {
+
             
-            case "login":
-            case "LOGIN":
-            case "Login":
-                // get login details
+         if(input.equals("login")||input.equals("LOGIN")||input.equals("Login"))   
+         {      // get login details
                 System.out.println("Enter USER NAME ");
                 name=scanner.nextLine();
                 System.out.println("Enter USER PASSWORD ");
                 password=scanner.nextLine();
-                Login(name,password);
-                break;
-                
-            case "register":
-            case "Register":
-            case "REGISTER":
-                System.out.println("Enter USER NAME ");
+                user=Login1(name,password);
+                return user;
+         }
+            
+         if(input.equals("register")||input.equals("Register")||input.equals("REGISTER"))   
+
+         { 
+          
+                System.out.println("\tEnter USER NAME ");
                 name=scanner.nextLine();
-                System.out.println("Enter USER PASSWORD ");
+                System.out.println("\tEnter USER PASSWORD ");
                 password=scanner.nextLine();
-                System.out.println("Enter USER PHONE ");
+                System.out.println("\tEnter USER PHONE ");
                 String phonee;
                 phonee=scanner.nextLine(); 
                 phone=Integer.parseInt(phonee);
-                System.out.println("Enter USER EMAIL ");
+                System.out.println("\tEnter USER EMAIL ");
                 email=scanner.nextLine();
-                System.out.println("Enter USER LOCATION ");
+                System.out.println("\tEnter USER LOCATION ");
                 location=scanner.nextLine();
                 regesiter(name,password,email,phone,location);
-                System.out.println("---- ACCOUNT IS ADDED ----");
-                break;
-           
-            default:
-                System.out.println("---- INVALID INPUT ----");
-                break;
-        }
-        
+                System.out.println("\n\t\t=======---- ACCOUNT IS ADDED ----=======\n");
+                return user;
+
+         }
+         else
+                System.out.println("!!!!!!!!!--------- INVALID INPUT -------!!!!!!!!!");
+        return user;
+            
+
     }
     
-    public static void Login(String n,String p)
-    {
-        int i=1;
-        for (User userslist1 : userslist) 
-        {
-            if("reg".equals(userslist1.getStatus()))
-            {  
-               if(n.equals(userslist1.getName()))
-               {
-                   if(p.equals(userslist1.getPassword()))
-                    {
-                       numofuser=i; 
-                       System.out.println("---- YOUR LOGIN SUCCEDD ----");
-                       return;
-                    }
-               }
-            }
-            i++;
-        }
-        System.out.println("---- NOT IN SYSTEM ----");
-    }
     
     public static User Login1(String n,String p)
     {
@@ -200,6 +181,7 @@ public class Users
                {
                    if(p.equals(userslist1.getPassword()))
                     {
+                       System.out.println("\n\t\t----==== YOUR LOGIN SUCCEDD ====----");
                        return  userslist1;
                         
                     }
@@ -212,13 +194,14 @@ public class Users
     
     
     
-    public static void regesiter(String n,String p,String E,int ph,String lo) 
+    public static User regesiter(String n,String p,String E,int ph,String lo) 
     {
         User e=new User(n,p,E,ph,lo);
         e.setStatus("reg");
         list.put(n, p);
         userslist.add(e);  
         WRTIE_all_to_file(e);
+        return e;
     }
 
     
@@ -277,6 +260,7 @@ public class Users
         else
            System.out.println("-----_____-- NOT IN SYSTEM --_____-----"); 
     }
+    
     public static void fill_USER(int n)
     {
         for(int i=1;i<=n;i++)
@@ -290,21 +274,17 @@ public class Users
         }
     }
         
-        
-
     public static void print()
     {
          
         System.out.println(userslist.get(4).getName()+"  _---_  "+userslist.get(4).getPassword());
-        
-        
     }
     
     
     public static void READ_users_from_FILE()
     { 
         
-        String fileName = "C:\\Users\\Poula\\Desktop\\myprojects\\java\\assi_sw1\\Users.txt";  
+        String fileName = "Users.txt";  
 
         File file = new File(fileName);
         String line = null;
@@ -343,7 +323,7 @@ public class Users
     
     public static void WRTIE_all_to_file(User e)
     {
-        String fileName = "C:\\Users\\Poula\\Desktop\\myprojects\\java\\assi_sw1\\Users.txt";  
+        String fileName = "Users.txt";  
         // write the content in file 
         try(FileWriter fileWriter = new FileWriter(fileName,true)) 
         {  

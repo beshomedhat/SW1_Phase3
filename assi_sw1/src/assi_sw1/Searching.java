@@ -52,16 +52,12 @@ public class Searching {
 
 public static void getCategory()
 {
-           System.out.print("Enter Category of item : ");
-           System.out.println();
-           System.out.print("For Wallet write 'Wallets ");
-           System.out.println();
-           System.out.print("For IDs write 'ID' ");
-           System.out.println();
-           System.out.print("For Phones write 'Phones' ");
-           System.out.println();
-           System.out.print("For Papers&Files write p and f ");
-           System.out.println();
+           System.out.print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+           System.out.print("\n\t\t-------------- Enter Category of item : --------------");
+           System.out.print("\n\t\t-------------- For Wallet write 'Wallets -------------");
+           System.out.print("\n\t\t-------------- For IDs write 'ID'  -------------------");
+           System.out.print("\n\t\t-------------- For Phones write 'Phones'  ------------");
+           System.out.print("\n\t\t-------------- For Papers&Files write p and f  -------");
            String category;
         Scanner scanner = new Scanner(System.in);
         category=scanner.nextLine();
@@ -69,8 +65,9 @@ public static void getCategory()
         for (int i=0;i<Itemslist.size();i++) 
         {
              
-            if(category==Itemslist.get(i).getCaregory())
+            if(category.equals(Itemslist.get(i).getCaregory()))
             {  
+                                
                 Item e =Itemslist.get(i);    
                 String item1 = e.getCaregory()+
                     "  "+e.getColor()
@@ -79,6 +76,10 @@ public static void getCategory()
                     +"  "+e.getItem_ID()+" \n";
                 System.out.println(item1);
                 
+            }
+            else {
+                System.out.println("Item is not found");
+               
             }
            
         }
@@ -87,30 +88,35 @@ public static void getCategory()
 
 public static void getItemFeatures()
 {
-        System.out.print("Enter Features of item : ");
-        System.out.print("Enter color of item : ");
+        System.out.print("\n\t\t----------- Enter Features of item : -----------");
+        System.out.print("\n\t\t----------- Enter color of item : -----------");
         String color;
         Scanner scanner = new Scanner(System.in);
         color=scanner.nextLine();
-        System.out.print("Enter Status of item : ");
+        System.out.print("\n\t\t----------- Enter Status of item : -----------");
         String Status;
         Scanner scanner1 = new Scanner(System.in);
         Status=scanner1.nextLine();       
         for (int i=0;i<Itemslist.size();i++) 
         {
-             
-            if(Status==Itemslist.get(i).getStatus() || color==Itemslist.get(i).getColor())
+            
+            String itemss = Itemslist.get(i).getStatus();            
+            String itemc = Itemslist.get(i).getColor(); 
+            if(Status.equals(itemss) || color.equals(itemc))
             {  
                 Item e =Itemslist.get(i);    
                 String item1 = e.getCaregory()+
-                    "  "+e.getColor()
+                     "  "+e.getColor()
                     +"  "+e.getFinding_Location()
                     +"  "+e.getStatus()
                     +"  "+e.getItem_ID()+" \n";
                 System.out.println(item1);
                 
             }
-           
+            else {
+                System.out.println("Item is not found");
+               
+            }
         }
         
 }

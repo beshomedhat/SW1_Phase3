@@ -38,7 +38,7 @@ public class Assi_sw1
      {
         
        
-       System.out.println("-_-_-_-_--_-_-_-_--_-_-_-_-  WELCOME TO LA2ENY -_-_-_-_--_-_-_-_--_-_-_-_-");
+       System.out.println("-_-_-_-_--_-_-_-_--_-_-_-_-  WELCOME TO LA2ENY -_-_-_-_--_-_-_-_--_-_-_-");
        userr=Choose1();
        if(userr!=null )
        {

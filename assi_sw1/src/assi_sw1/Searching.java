@@ -65,8 +65,9 @@ public static void getCategory()
         for (int i=0;i<Itemslist.size();i++) 
         {
              
-            if(category==Itemslist.get(i).getCaregory())
+            if(category.equals(Itemslist.get(i).getCaregory()))
             {  
+                                
                 Item e =Itemslist.get(i);    
                 String item1 = e.getCaregory()+
                     "  "+e.getColor()
@@ -75,6 +76,10 @@ public static void getCategory()
                     +"  "+e.getItem_ID()+" \n";
                 System.out.println(item1);
                 
+            }
+            else {
+                System.out.println("Item is not found");
+               
             }
            
         }
@@ -94,19 +99,24 @@ public static void getItemFeatures()
         Status=scanner1.nextLine();       
         for (int i=0;i<Itemslist.size();i++) 
         {
-             
-            if(Status==Itemslist.get(i).getStatus() || color==Itemslist.get(i).getColor())
+            
+            String itemss = Itemslist.get(i).getStatus();            
+            String itemc = Itemslist.get(i).getColor(); 
+            if(Status.equals(itemss) || color.equals(itemc))
             {  
                 Item e =Itemslist.get(i);    
                 String item1 = e.getCaregory()+
-                    "  "+e.getColor()
+                     "  "+e.getColor()
                     +"  "+e.getFinding_Location()
                     +"  "+e.getStatus()
                     +"  "+e.getItem_ID()+" \n";
                 System.out.println(item1);
                 
             }
-           
+            else {
+                System.out.println("Item is not found");
+               
+            }
         }
         
 }

@@ -43,6 +43,7 @@ public class Assi_sw1
        if(userr!=null )
        {
            
+           
           do
           {
            System.out.println("\n\n-----NOW YOU ARE REGESTERED-----");
